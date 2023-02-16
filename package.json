@@ -1,0 +1,25 @@
+{
+  "name": "course-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Ismail Salah",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "bson-objectid": "^2.0.4",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.18.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.9.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
