@@ -14,11 +14,22 @@
                      <img width="50" height="50" class="object-fit-cover border rounded" src="/assets/<%=lecture.instructor%>.jpeg">
                   </div>
                   <h6 class="card-subtitle my-2 text-muted"><%=lecture.time%></h6>
+                  <div class="hstack gap-3">
                   <a href="/admin/course/<%=course._id%>/<%=lecture._id%>" class="btn btn-primary">UPDATE</a>
+                  <form action="/admin/course/<%=course._id%>/<%=lecture._id%>?_method=DELETE" method="POST">
+                     <button class="btn btn-danger">DELETE</button>
+                  </form>
+                  </div>
                </div>
             </div>
          </div>
          <%}%>
+      </div>
+      <div class="hstack gap-3">
+      <a href="/admin/course/<%=course._id%>/new-lecture" class="btn btn-info">ADD LECTURE</a>
+      <form action="/admin/course/<%=course._id%>?_method=DELETE" method="POST">
+      <button class="btn btn-danger">DELETE</button>
+      </form>
       </div>
    </div>
 </div>
