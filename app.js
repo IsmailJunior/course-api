@@ -36,21 +36,21 @@ app.use( bodyParser.json() );
 app.use( morgan( "dev" ) );
 app.use( methodOverride( "_method" ) );
 
-app.get( "/", async ( req, res ) =>
-{
-	try
-	{
-		const data = await Course.find( {} )
-			.populate( { path: "lectures" } );
-		console.log( "hit" );
-		res.send( data );
-	} catch ( error )
-	{
-		console.log( error );
-	}
-} );
+// app.get( "/", async ( req, res ) =>
+// {
+// 	try
+// 	{
+// 		const data = await Course.find( {} )
+// 			.populate( { path: "lectures" } );
+// 		console.log( "hit" );
+// 		res.send( data );
+// 	} catch ( error )
+// 	{
+// 		console.log( error );
+// 	}
+// } );
 
-app.get( "/admin", async ( req, res ) =>
+app.get( "/", async ( req, res ) =>
 {
 	try
 	{
