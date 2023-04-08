@@ -1,0 +1,72 @@
+<% layout('layouts/template') %>
+<form action="/admin/course/<%=course._id%>/new-lecture" method="POST">
+ <li class="list-group-item">
+               <div class="mb-3">
+               <label for="lecture-id" class="form-label">Lecture id</label>
+               <input type="text" class="form-control" id="lecture-id" placeholder="ID" name="id" required>
+            </div>
+            </li>
+         <li class="list-group-item">
+            <div class="mb-3">
+               <label for="title" class="form-label">Title</label>
+               <input type="text" class="form-control" id="title" placeholder="Title" name="title" required>
+            </div>
+         </li>
+            <li class="list-group-item">
+            <div class="mb-3">
+               <label for="description" class="form-label">Description</label>
+               <input type="text" class="form-control" id="description" placeholder="Description" name="description" required>
+            </div>
+         </li>
+         <li class="list-group-item">
+			<label for="instructor" class="form-label">Instructor</label>
+            <select class="form-select" id="instructor" name="instructor" required aria-label="Default select example">
+               <option selected>Select</option>
+               <option value="DR.Omar">DR.Omar</option>
+               <option value="DR.Ali">DR.Ali</option>
+               <option value="DR.Alia">DR.Alia</option>
+               <option value="DR.Bariq">DR.Bariq</option>
+               <option value="DR.Ibrahim">DR.Ibrahim</option>
+               <option value="DR.Jasem">DR.Jasem</option>
+               <option value="DR.Noor">DR.Noor</option>
+               <option value="DR.Rami">DR.Rami</option>
+               <option value="DR.Salah">DR.Salah</option>
+               <option value="DR.Tariq">DR.Tariq</option>
+            </select>
+         </li>
+         <li class="list-group-item">
+			<label for="Image" class="form-label">Image</label>
+            <select class="form-select" id="image" name="image" required aria-label="Default select example">
+               <option selected>Select</option>
+               <option value="DR.Omar">DR.Omar</option>
+               <option value="DR.Ali">DR.Ali</option>
+               <option value="DR.Alia">DR.Alia</option>
+               <option value="DR.Bariq">DR.Bariq</option>
+               <option value="DR.Ibrahim">DR.Ibrahim</option>
+               <option value="DR.Jasem">DR.Jasem</option>
+               <option value="DR.Noor">DR.Noor</option>
+               <option value="DR.Rami">DR.Rami</option>
+               <option value="DR.Salah">DR.Salah</option>
+               <option value="DR.Tariq">DR.Tariq</option>
+            </select>
+         </li>
+         <li class="list-group-item">
+            <div class="mb-3">
+               <label for="duration" class="form-label">Duration</label>
+               <input type="text" class="form-control" id="duration" placeholder="Duration" name="duration" required>
+            </div>
+         </li>
+         <li class="list-group-item">
+            <div class="mb-3">
+               <label for="time" class="form-label">Time</label>
+               <input type="text" class="form-control" id="time" name="time" placeholder="Time"  required>
+            </div>
+         </li>
+         <li class="list-group-item">
+            <div class="mb-3">
+               <label for="hall" class="form-label">Hall</label>
+               <input type="text" class="form-control" id="hall" name="hall" placeholder="Hall" required>
+            </div>
+         </li>
+         <button class="btn btn-primary">ADD LECTURE</button>
+         </form>

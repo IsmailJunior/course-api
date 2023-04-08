@@ -1,0 +1,36 @@
+<% layout('layouts/template') %>
+<% for (course of data) {%>
+<div class="card my-4">
+   <h5 class="card-header"><%=course.day%></h5>
+   <div class="card-body">
+      <div class="row">
+         <% for (lecture of course.lectures) {%>
+         <div class="col-sm-6">
+            <div class="card my-2">
+               <div class="card-body">
+                  <h5 class="card-title"><span class="badge bg-secondary"><%=lecture.title%></span></h5>
+                  <div class="d-flex align-items-center justify-content-between">
+                     <h5 class="card-subtitle my-4"><%=lecture.instructor%></h5>
+                     <img width="50" height="50" class="object-fit-cover border rounded" src="/assets/<%=lecture.instructor%>.jpeg">
+                  </div>
+                  <h6 class="card-subtitle my-2 text-muted"><%=lecture.time%></h6>
+                  <div class="hstack gap-3">
+                  <a href="/admin/course/<%=course._id%>/<%=lecture._id%>" class="btn btn-primary">UPDATE</a>
+                  <form action="/admin/course/<%=course._id%>/<%=lecture._id%>?_method=DELETE" method="POST">
+                     <button class="btn btn-danger">DELETE</button>
+                  </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <%}%>
+      </div>
+      <div class="hstack gap-3">
+      <a href="/admin/course/<%=course._id%>/new-lecture" class="btn btn-info">ADD LECTURE</a>
+      <form action="/admin/course/<%=course._id%>?_method=DELETE" method="POST">
+      <button class="btn btn-danger">DELETE</button>
+      </form>
+      </div>
+   </div>
+</div>
+<%}%>
