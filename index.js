@@ -16,7 +16,7 @@ const morgan = require( "morgan" );
 const app = express();
 const port = 8080;
 
-const DB_URL = "mongodb://localhost:27017/course";
+const DB_URL = process.env.DB_URL;
 main().catch( ( err ) => console.log( err ) );
 async function main ()
 {
