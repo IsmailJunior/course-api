@@ -5,8 +5,8 @@ if ( process.env.NODE_ENV !== "production" )
 
 const express = require( "express" );
 const mongoose = require( "mongoose" );
-const Course = require( "./Model/Course" );
-const Lecture = require( "./Model/Lecture" );
+const Course = require( "./models/Course" );
+const Lecture = require( "./models/Lecture" );
 const cors = require( "cors" );
 const ejsMate = require( "ejs-mate" );
 const methodOverride = require( "method-override" );
