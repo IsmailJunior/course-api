@@ -14,7 +14,7 @@ const bodyParser = require( "body-parser" );
 const path = require( "path" );
 const morgan = require( "morgan" );
 const app = express();
-const port = 8080 || process.env.PORT;
+const port = process.env.PORT || 3000
 
 const DB_URL = process.env.DB_URL;
 main().catch( ( err ) => console.log( err ) );
